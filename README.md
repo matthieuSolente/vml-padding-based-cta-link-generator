@@ -7,17 +7,17 @@ This **generator** provides the **html and vml code** needed to create **rounded
 ### CSS
 Unlike other generators, this one offers minimal CSS code to overcome display problems in Darkmode. For any color, the basic css code is as follows:
 
-```<!--[if gte mso 16]>
+``` <!--[if gte mso 16]>
 <style>
 .my-class{
 background: transparent !important;
 }
 </style>
-<![endif]-->```
+<![endif]--> ```
 
 And if you choose pure white or pure black, you'll get the wordkaround to keep the text white or black on outlook (windows),i.e
 
-```<!--[if gte mso 16]>
+``` <!--[if gte mso 16]>
 <style>
  .my-class{
 mso-style-textfill-type:gradient;
@@ -26,7 +26,7 @@ color:#000000 !important;
  background: transparent !important;
 }
 </style>
-<![endif]-->```
+<![endif]--> ```
 
 
 ### No width and height
