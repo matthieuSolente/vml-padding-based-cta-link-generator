@@ -30,7 +30,7 @@
     height = $(cssBtnClass).outerHeight();
     bgColor = $('#bgColor').val();
     bgvml = 'fillcolor="'+$('#bgColor').val()+'"';
-    arcsize = Math.ceil(bRadius / height*100)+'%'; 
+    arcsize = Math.ceil($('#bRadius').val()/$(cssBtnClass).outerHeight()*100); 
     letterspacing = Math.ceil($('#lrPadding').val()*79.5/100)+'px';
     lineHeight = Math.ceil($('#fontSize').val()*1.5);
     msoTextRaise = Math.ceil((lineHeight - $('#fontSize').val())*77.7/100)+'px';
@@ -70,6 +70,9 @@ $(document).ready(function(){
   updateButton();
 });
 $( "input, select" ).on('change',function() {
+  updateButton();
+});
+$('#btnClass').on('change',function() {
   updateButton();
 });
 })(jQuery);
