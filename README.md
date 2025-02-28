@@ -64,6 +64,7 @@ Thus, to calculate the value of the mso-text-raise attribute I take the value of
 msoTextRaise=Math.ceil((lineHeight - $('#fontSize').val())*77.7/100)+'px';
 ```
 
+## Outlook update in 2023
 
 In place of the abandoned properties, following the Outlook update, I took the work of Mark Robbins and his pedantic semantic button to recreate the horizontal and vertical padding for Outlook. Here are the calculation methods
 ### Top and bottom padding
