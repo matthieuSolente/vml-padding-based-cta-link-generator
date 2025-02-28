@@ -54,30 +54,11 @@
                 <input type="text" name="button-text-color" id="fontColor" value="#fffff2" data-coloris>
               </div>
             </div>
-          <div class="button-generator--row">
-          
-          <div class="button-generator--half-row">
-            <label for="bRadius">Border radius</label>
-            <input type="number" name="button-border-radius" value="31" id="bRadius" min="0">
-            <aside class="px">px</aside>
-          </div>
-        </div>
             <div class="button-generator--row">
               <div class="button-generator--half-row">
-                <div class="checkbox">
-                  <input class="inline checkbox" type="checkbox" name="button-border" id="btnBorder">
-                  <label class="inline" for="btnBorder">Border ?</label>
-                </div>
-              </div>
-            </div>
-            <div id="borderInput" class="button-generator--row">
-              <div class="button-generator--half-row">
-                <label for="borderColor">Border color</label>
-                <input type="text" name="button-border-color" id="borderColor" value="#000001" data-coloris>
-              </div>
-              <div>
-                <label for="borderWidth">Border width</label>
-                <input type="number" name="button-border-width" id="borderWidth"  max="8" value="1">
+                <label for="bRadius">Border radius</label>
+                <input type="number" name="button-border-radius" value="31" id="bRadius" min="0">
+                <aside class="px">px</aside>
               </div>
             </div>
             <div class="button-generator--row">
@@ -96,12 +77,9 @@
             </div>
             <div class="button-generator--row">
               <div class="button-generator--half-row">
-                <label for="align">Align</label>
-                <select id="align" name="button-align-button">
-                  <option value="left">Left</option>
-                  <option value="center" selected="selected">Center</option>
-                  <option value="right">Right</option>
-                </select>
+                <label for="fontBase">Body font size</label>
+                <input type="number" name="body-font-Size" id="fontBase" min="12" max="18" value="16">
+                <aside class="px">px</aside>
               </div>
             </div>
             <div class="button-generator--row">
@@ -150,7 +128,6 @@
         </div>
       </div>
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/coloris.js"></script>
     <script src="js/wcag.js"></script>
