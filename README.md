@@ -85,13 +85,13 @@ To indicate the value of the mso-font-width property: we take the horizontal pad
 ```javascript
 msoFontWidth = Math.ceil(($('#lrPadding').val() / $('#fontBase').val()) / ($('#fontSize').val() / $('#fontBase').val())*100)+'%';
 ```
-### mso-text-raise 
+### Vertical padding for Outlook 
 To obtain the value of the mso-text-raise property, same thing, except that we take the vertical padding, and multiply the result by two
 
 ```javascript
 msoTextRaise = Math.ceil(($('#tbPadding').val() / $('#fontBase').val()) / ($('#fontSize').val() / $('#fontBase').val())*100)*2+'%';
 ```
-### mso-text-raise 
+### Horizontal padding for Outlook 
 To obtain the value of the mso-text-raise property, same thing, except that we take the vertical padding.
 ```javascript
 htmlMsoTextRaise = Math.ceil(($('#tbPadding').val()/$('#fontBase').val()) / ($('#fontSize').val() / $('#fontBase').val())*100)+'%';
