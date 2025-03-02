@@ -90,7 +90,7 @@ msoFontWidth = Math.ceil(($('#lrPadding').val() / $('#fontBase').val()) / ($('#f
 ```
 ### Vertical padding for Outlook 
 
-In Mark version, hre he uses percentage. To obtain the value of the mso-text-raise property, same thing, except that we take the vertical padding, and multiply the result by two
+In Mark version, he uses percentage. To obtain the value of the mso-text-raise property, same thing, except that we take the vertical padding, and multiply the result by two
 
 ```javascript
 msoTextRaise = Math.ceil(($('#tbPadding').val() / $('#fontBase').val()) / ($('#fontSize').val() / $('#fontBase').val())*100)*2+'%';
