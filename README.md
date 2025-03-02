@@ -114,7 +114,7 @@ msoTextRaise =(($('#tbPadding').val() * 75 / 100)*(80/100) /2).toFixed(2)+'pt';
 
 We take the vertical padding and multiply it by 75 divided by 100 to obtain the point value. As is, the value, although correct, does not reduce the additional padding. After numerous tests, I found that by taking 80% of this value and dividing it by 2, we arrived at an almost identical result between Outlook and the other mailboxes. 
 
-Even if the calculation seems convoluted, the rendering is much better than if we apply a simple v:roundrect component around the pedantic semantic button.
+Even if the calculation seems convoluted, the rendering is much better than if we apply a simple v:roundrect component around the pedantic semantic button. I noticed that the mso-text-raise property could take negative values ​​to render the padding-top. We can therefore simplify the formula as follows. There are therefore only two <i> tags which surround the link text, and which respectively include the horizontal padding and the padding-bottom, then the padding-horizontal and the padding-top
 
 ```
 <!--[if mso]><i style="mso-font-width:250%;mso-text-raise:3.00pt" hidden>&emsp;</i><![endif]-->Show me the button!<!--[if mso]><i style="mso-font-width:250%;mso-text-raise:-3.00pt" hidden>&emsp;&#8203;</i><![endif]-->
