@@ -104,19 +104,21 @@ htmlMsoTextRaise = Math.ceil(($('#tbPadding').val()/$('#fontBase').val()) / ($('
 
 ## Update 2025
 
-Mark's version is perfect for his pure html version. But when we surround the link with a vml component, v:roundrect alone or with v:texbox, there are big visible differences between the rendering on Outlook and that on other mailboxes. With or without v:textbox, the v:roundrect component oddly adds vertical padding. By inspecting the code on an Outlook mailbox, we see that the latter transforms the code, but despite measures that seem consistent, this vertical padding persists.
+Mark's version is perfect for his pure html version. But when we surround the link with a vml component, `v:roundrect` alone or with `v:textbox`, there are big visible differences between the rendering on Outlook and that on other mailboxes. With or without 'v:textbox', the 'v:roundrect' component oddly adds vertical padding. By inspecting the code on an Outlook mailbox, we see that the latter transforms the code, but despite measures that seem consistent, this vertical padding persists.
 
-For the mso-text-raise values, I looked for values ​​that allowed almost equivalent rendering on Outlook, and I arrived at this formula. Rather than the percentage, I play on the unit in points.
+For the `mso-text-raise` values, I looked for values ​​that allowed almost equivalent rendering on Outlook, and I arrived at this formula. Rather than the percentage, I play on the unit in points.
 
 ```javascript
 msoTextRaise =(($('#tbPadding').val() * 75 / 100)*(80/100) /2).toFixed(2)+'pt';
 ```
 
-We take the vertical padding and multiply it by 75% to obtain the point value. As is, the value, although correct, does not reduce the additional padding. After numerous tests, I found that by taking 80% of this value and dividing it by 2, we arrived at an almost identical result between Outlook and the other mailboxes. 
+We take the vertical padding and multiply it by 75 divided by 100 to obtain the point value. As is, the value, although correct, does not reduce the additional padding. After numerous tests, I found that by taking 80% of this value and dividing it by 2, we arrived at an almost identical result between Outlook and the other mailboxes. 
 
 Even if the calculation seems convoluted, the rendering is much better than if we apply a simple v:roundrect component around the pedantic semantic button.
 
 ```
 <!--[if mso]><i style="mso-font-width:250%;mso-text-raise:3.00pt" hidden>&emsp;</i><![endif]-->Show me the button!<!--[if mso]><i style="mso-font-width:250%;mso-text-raise:-3.00pt" hidden>&emsp;&#8203;</i><![endif]-->
 ```
+
+So try it and enjoy !! Of course, if you notice any areas for improvement, don't hesitate to let me know!
 
